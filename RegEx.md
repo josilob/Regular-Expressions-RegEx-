@@ -166,7 +166,7 @@ console.log(str.split(regex));
 The string was split at 64a because that substring matches the regex specified.
 Note that the global flag - `g` - in split is irrelevant, unlike the i flag and other flags. This is because split splits the string at the several points the regex matches.
 
-### Anything inbetween
+### Anything in between
 
 Match anything: `.*` => match `any character, any number of times`
 This is used to find matches STARTING with or ENDING in SOME TEXT.
