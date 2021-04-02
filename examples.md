@@ -1,4 +1,5 @@
-Examples on the string:
+# Examples on the string:
+
 _'The fat cat ran down the street.
 It was searching for a mouse to eat.'_
 
@@ -17,19 +18,29 @@ It was searching for a mouse to eat.'_
 `/\./g` - selects all periods (backslash cancels)
 `/.\./g` - selects any character that comes before period
 
-`/\w/` - Match any word character (alphanum + underscore)
-`/\W/` - Match everything that is not alphanumeric character
-`/\d/` - Match any digit
-`/\s/` - Match any form of whitespace there is
-`/\S/` - Match everything that is NOT a whitespace
+`a*` `a+` `a?` 0 or more, 1 or more, 0 or 1
 
-`/\w{4,}/g` - Match any four alphanumerics in a row
+## Character Classes
+
+`/\w/` - Match any word character (alphanum + underscore)
+`/\W/` - Match ANYTHING BUT alphanumeric character
+`/\d/` - Match any digit
+`/\D/` - Match ANYTHING BUT digit
+`/\s/` - Match any form of whitespace there is
+`/\S/` - Match ANYTHING BUT a whitespace
+
+## Quantifiers
+
+`/\w{4}/g` - Match exactly four alphanumerics in a row
+`/\w{4,}/g` - Match any four or more alphanumerics in a row
 `/\w{4,5}/g` - Match between 4 and 5 alphanumerics in a row
 
 /[fc]at/g - Match either 'fat' or 'cat' in a string
+
+## Ranges
+
 /[a-zA-Z]at/g - Match any alphabet letter upper or lowercase before 'at' (fat, cat, eat)
 
-or smaller ranges:
 /[a-c]at/g - Matches only 'cat' in this case
 
 ## Grouping
@@ -38,9 +49,11 @@ or smaller ranges:
 
 `/(t|e|r){2,3}/g` - Matches 2-3 characters from brackets in a row (tre, et)
 
+## Beginning and end of the line
+
 `/^T/g` - Match the beginning of the line (works only on 'T'), to enable it on multiline statement, flag 'm' must be added `/^I/gm` - This will match 'I' in 2nd line
 
-`/\.$/g` - Match the dot at the END of the line (add flag 'm' for multiline)
+`/\.$/g` - Match the dot at the END of the line (add flag 'm' for multiline string)
 
 ## Lookaheads and Lookbehinds (positive and negative)
 
@@ -52,7 +65,8 @@ or smaller ranges:
 
 `/.(?!at)/g` - inverts previous case (NOT followed by 'at') - everything but fat, cat & eat
 
-Phone Number Example:
+## Phone Number Example:
+
 `/\d{10}/g` - Match 10 digits in a row (1234567890)
 `/\d{3}-?\d{3}-?\d{4}/` Match 10 digits with dashes, optionally (123-456-7890)
 `/\d{3}[- ]?\d{3}[- ]?\d{4}/` Match 10 digits with spaces or dashes, optionally (123-456-7890)
