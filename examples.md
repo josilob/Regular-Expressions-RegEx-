@@ -35,7 +35,7 @@ It was searching for a mouse to eat.'_
 `/\w{4,}/g` - Match any four or more alphanumerics in a row  
 `/\w{4,5}/g` - Match between 4 and 5 alphanumerics in a row  
 
-/[fc]at/g - Match either 'fat' or 'cat' in a string  
+`/[fc]at/g` - Match either 'fat' or 'cat' in a string  
 
 ## Ranges
 
