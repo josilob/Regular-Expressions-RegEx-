@@ -39,9 +39,9 @@ It was searching for a mouse to eat.'_
 
 ## Ranges
 
-/[a-zA-Z]at/g - Match any alphabet letter upper or lowercase before 'at' (fat, cat, eat)  
+`/[a-zA-Z]at/g` - Match any alphabet letter upper or lowercase before 'at' (fat, cat, eat)  
 
-/[a-c]at/g - Matches only 'cat' in this case  
+`/[a-c]at/g` - Matches only 'cat' in this case  
 
 ## Grouping
 
